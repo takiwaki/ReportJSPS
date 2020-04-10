@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 import csv
 
-csvfile = 'C01prefile.csv'
+csvfile = 'prefile.csv'
 f = open(csvfile, "r", encoding="SJIS")
 reader = csv.reader(f)
 # header = next(reader)
