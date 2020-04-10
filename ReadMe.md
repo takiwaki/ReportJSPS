@@ -34,6 +34,7 @@ M1-prefile.csvを例として配り，更新してもらうと良いと思いま
 Makefileを開いてprojectに集計したいプロジェクトの名前を書いてください．defaultはSummaryになっています．
 つぎにmembersに集めたファイルの先頭部分を書いてください．M1-doifile.csvを集めたならM1です．
 
+例としてある更新されてないM1-doifile.csv,M2-doifile.csv,M1-prefile.csv,M2-prefile.csvが残っている場合はここで消去してください．
 問題なければmakeで終わります．project名-articles.csvとproject名-presentations.csvができます．
 
 問題が起きた場合はcurl,pythonがインストールされているかチェックしてください．
