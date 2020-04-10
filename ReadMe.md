@@ -1,6 +1,6 @@
 # 学振報告用CSVファイルを作成するスクリプト
 
-以下の手順に従ってください．
+以下の手順に従ってください．内部でcurlとpython を使うのでインストールしてください．
 
 ## 個別にDOIと発表を収集する
 
@@ -20,7 +20,7 @@
 
 |Presenter|Title|Conference|Year from|Year to|invited?|international conference?|
 |----|----|----|----|----|----|----|
-|滝脇知也|ランキン-ユゴニオ関係でみる超新星の衝撃波復活機構|衝撃波研究会|2018|yes|no|
+|滝脇知也|ランキン-ユゴニオ関係でみる超新星の衝撃波復活機構|衝撃波研究会|2018| |yes|no|
 |Tomoya Takiwaki;  Kei Kotake|C01 progress report|The first annual symposium of the innovative area "Gravitational Wave Physics and Astronomy: Genesis"	|2018|	|yes|	yes|
 
 ## スクリプトで処理
