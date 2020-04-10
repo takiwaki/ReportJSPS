@@ -11,6 +11,7 @@
 形式は以下のようにしてください．2行目は例です．
 
 |DOI	|refereed?|open access?|international collaboration?|comment|
+|----|----|----|----|----|
 |http://dx.doi.org/10.1093/ptep/ptx093|yes|no|no|Nakano2017|
 
 ### 発表を書いたファイル
@@ -18,6 +19,7 @@
 形式は以下のようにしてください．Year toは年をまたがない限り省略可能です．
 
 |Presenter|Title|Conference|Year from|Year to|invited?|international conference?|
+|----|----|----|----|----|----|----|
 |滝脇知也|ランキン-ユゴニオ関係でみる超新星の衝撃波復活機構|衝撃波研究会|2018|yes|no|
 |Tomoya Takiwaki;  Kei Kotake|C01 progress report|The first annual symposium of the innovative area "Gravitational Wave Physics and Astronomy: Genesis"	|2018|	|yes|	yes|
 
