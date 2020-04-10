@@ -14,6 +14,9 @@
 |----|----|----|----|----|
 |http://dx.doi.org/10.1093/ptep/ptx093|yes|no|no|Nakano2017|
 
+M1-doifile.csvを例として配り，更新してもらうと良いと思います．
+ファイルのバージョンを管理したい時はM1v1-doifile.csvのように-doifileの前の部分にバージョン名をいれてもらってください．
+
 ### 発表を書いたファイル
 ファイルの名前は??-prefile.csvとしてください．?? には自分の名前等をいれます．
 形式は以下のようにしてください．Year toは年をまたがない限り省略可能です．
@@ -22,6 +25,9 @@
 |----|----|----|----|----|----|----|
 |滝脇知也|ランキン-ユゴニオ関係でみる超新星の衝撃波復活機構|衝撃波研究会|2018| |yes|no|
 |Tomoya Takiwaki;  Kei Kotake|C01 progress report|The first annual symposium of the innovative area "Gravitational Wave Physics and Astronomy: Genesis"	|2018|	|yes|	yes|
+
+M1-prefile.csvを例として配り，更新してもらうと良いと思います．
+ファイルのバージョンを管理したい時はM1v1-prefile.csvのように-prefileの前の部分にバージョン名をいれてもらってください．
 
 ## スクリプトで処理
 
