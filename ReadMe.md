@@ -2,7 +2,7 @@
 
 以下の手順に従ってください．
 
-## 個別にDOIと発表を収集する
+## 1. 個別にDOIと発表を収集する
 
 ファイルの名前と中身は以下の形式に従ってください．
 
@@ -32,7 +32,7 @@
 |Tomoya Takiwaki;  Kei Kotake|C01 progress report|The first annual symposium of the innovative area "Gravitational Wave Physics and Astronomy: Genesis"	|2018|	|yes|	yes|
 
 
-## スクリプトで処理
+## 2. スクリプトで処理
 
 以下では内部で`curl`と`python`を使うのでインストールしてください．
 
@@ -58,16 +58,24 @@
 
 ### ノート
 
-`doi-convt.sh`の中では`curl`でdoiから論文の情報を取り寄せます．ただし，この論文の情報はutf-8で書かれています．
+`doi-convt.sh`の中では`curl`でDOIから論文の情報を取り寄せます．ただし，この論文の情報はutf-8で書かれています．
 一方，学振への提出(というかエクセルファイルの仕様)はsjisの出力を求めています．
 そこでsjisに直せないウムラウトなどの特殊文字を普通のアルファベットに変換するのが`DeleteUmlaut.py`です．
 その処理をした後，全体をsjisに変換し最終出力としています．
 
-## 重複をチェック
+## 3. 重複をチェック
 
 出来た`project名-articles.csv`と`project名-presentations.csv`で重複を消してください．これはエクセル等で並び替えるのがわかりやすいです．
 
-## 学振に提出
+## 4. 学振に提出
 
 あとは学振に提出してください．
 
+## 参考文献
+
+[Get metadata from DOI]:https://stackoverflow.com/questions/10507049/get-metadata-from-doi
+[JSPS]:https://www-shinsei.jsps.go.jp/kaken/topkakenhi/download-ka.html#tebiki3
+
+## 謝辞
+
+このスクリプトは新学術領域「重力波創世記」の成果報告のために作成しました．
