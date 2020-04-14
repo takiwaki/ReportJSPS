@@ -73,8 +73,8 @@
 
 ## 参考文献
 
-[Get metadata from DOI]:https://stackoverflow.com/questions/10507049/get-metadata-from-doi
-[JSPS]:https://www-shinsei.jsps.go.jp/kaken/topkakenhi/download-ka.html#tebiki3
+- [Get metadata from DOI](https://stackoverflow.com/questions/10507049/get-metadata-from-doi)
+- [JSPS](https://www-shinsei.jsps.go.jp/kaken/topkakenhi/download-ka.html#tebiki3)
 
 ## 謝辞
 
