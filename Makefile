@@ -57,7 +57,7 @@ ${doicolsuffix}${doisubsuffix}: doi-convt.sh DeleteUmlaut.py
 	rm  doifile.csv
 # comment out the final line  if you want to debug
 ${doisubsummary}: ${doisubdata}
-	cat ${doisubdata} > ${doisubsummary}
+	awk 1 ${doisubdata} > ${doisubsummary}
 	rm -f *_wou.csv *_utf.csv
 
 ${precolsuffix}${presubsuffix}: pre-convt.sh
@@ -66,7 +66,7 @@ ${precolsuffix}${presubsuffix}: pre-convt.sh
 	mv presentations.csv $*${presubsuffix}
 
 ${presubsummary}: ${presubdata}
-	cat ${presubdata} > ${presubsummary}
+	awk 1 ${presubdata} > ${presubsummary}
 
 clean:
 	echo "cleaning the data"
