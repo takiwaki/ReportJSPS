@@ -93,7 +93,7 @@ for (( count=1; count <= $LINE ; count++)); do
 done
 #nkf -Lw -s --overwrite ${csvotput}
 
-rm -fr input_tmp line_tmp inf_tmp
+rm -fr input_tmp line_tmp line_tmp2 inf_tmp
 
 ##############################################################################
 #

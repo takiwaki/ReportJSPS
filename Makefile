@@ -54,7 +54,7 @@ ${doicolsuffix}${doisubsuffix}: doi-convt.sh DeleteUmlaut.py
 	mv articles.csv $*${doisubsuffix}
 	mv articles_wou.csv $*-articles_wou.csv
 	mv articles_utf.csv $*-articles_utf.csv
-
+	rm  doifile.csv
 # comment out the final line  if you want to debug
 ${doisubsummary}: ${doisubdata}
 	cat ${doisubdata} > ${doisubsummary}
