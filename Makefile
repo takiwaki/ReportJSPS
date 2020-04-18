@@ -50,7 +50,7 @@ all: ${doisubsummary} ${presubsummary}
 
 ${doicolsuffix}${doisubsuffix}: doi-convt.sh DeleteUmlaut.py
 	cp $*${doicolsuffix} doi.csv
-	sh doi-convt.sh
+	/bin/bash doi-convt.sh
 	mv articles.csv $*${doisubsuffix}
 	mv articles_wou.csv $*-articles_wou.csv
 	mv articles_utf.csv $*-articles_utf.csv
@@ -62,7 +62,7 @@ ${doisubsummary}: ${doisubdata}
 
 ${precolsuffix}${presubsuffix}: pre-convt.sh
 	cp $*${precolsuffix} prefile.csv
-	sh pre-convt.sh
+	/bin/bash pre-convt.sh
 	mv presentations.csv $*${presubsuffix}
 
 ${presubsummary}: ${presubdata}
