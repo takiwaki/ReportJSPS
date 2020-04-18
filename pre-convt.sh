@@ -48,7 +48,8 @@ cat /dev/null > ${csvotput}
 declare -i count=1
 for (( count=1; count <= $LINE ; count++)); do 
     # the 1st column corresponds doi in ${csvinput}.
-    head -n ${count} input_tmp | tail -1  > line_tmp
+    head -n ${count} input_tmp | tail -1  > line_tmp2
+    sed 's/,,/, ,/g' line_tmp2 > line_tmp
      PRESENTOR=`gawk -v FPAT='([^,]+)|(\"[^\"]+\")' '{print $1 }' line_tmp `	
          TITLE=`gawk -v FPAT='([^,]+)|(\"[^\"]+\")' '{print $2 }' line_tmp `
     CONFERENCE=`gawk -v FPAT='([^,]+)|(\"[^\"]+\")' '{print $3 }' line_tmp `
@@ -56,7 +57,7 @@ for (( count=1; count <= $LINE ; count++)); do
         YEARTO=`gawk -v FPAT='([^,]+)|(\"[^\"]+\")' '{print $5 }' line_tmp `
        INVITED=`gawk -v FPAT='([^,]+)|(\"[^\"]+\")' '{print $6 }' line_tmp `
        INTENAT=`gawk -v FPAT='([^,]+)|(\"[^\"]+\")' '{print $7 }' line_tmp `
-    YEARTO=""
+       
 #     echo $PRESENTOR
 #     echo $TITLE
 #     echo $CONFERENCE
@@ -65,6 +66,8 @@ for (( count=1; count <= $LINE ; count++)); do
 #     echo INVITED$INVITED
 #      echo INTERNAT$INTENAT
      
+    YEARTO=`echo ${YEARTO} | sed -e "s/ //g" `
+      
     INVITED=`echo ${INVITED} | sed -e "s/ //g" `
 #    echo INVITED $INVITED
     case ${INVITED} in
@@ -77,14 +80,14 @@ for (( count=1; count <= $LINE ; count++)); do
 #    echo
        
     INTENAT=`echo "${INTENAT}" | sed -e "s/ //g" `
-    echo INTENAT ${INTENAT}
+#    echo INTENAT ${INTENAT}
     case ${INTENAT} in
 	"" | "Y" | "y" | "yes" | "Yes" | "YES" ) INNUM="1";;
 	"" | "N" | "n" | "no"  | "No"  | "NO"  ) INNUM="0";;
 	"" ) INNUM="0";;
     esac
-    echo INTENAT ${INNUM}
-    echo 
+#    echo INTENAT ${INNUM}
+#    echo 
     
     echo    ${PRESENTOR}${sep2}${TITLE}${sep2}${CONFERENCE}${sep2}${YEARFROM}${sep2}${YEARTO}${sep2}${INVITED}${sep2}${INNUM} >> ${csvotput}
 done
