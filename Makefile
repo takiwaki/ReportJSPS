@@ -49,7 +49,7 @@ all: ${doisubsummary} ${presubsummary}
 .SUFFIXES: ${doicolsuffix} ${doisubsuffix} ${precolsuffix} ${presubsuffix}
 
 ${doicolsuffix}${doisubsuffix}: doi-convt.sh DeleteUmlaut.py
-	cp $*${doicolsuffix} doi.csv
+	cp $*${doicolsuffix} doifile.csv
 	/bin/bash doi-convt.sh
 	mv articles.csv $*${doisubsuffix}
 	mv articles_wou.csv $*-articles_wou.csv
