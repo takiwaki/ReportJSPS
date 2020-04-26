@@ -1,6 +1,10 @@
 # 学振報告用CSVファイルを作成するスクリプト
 
 以下の手順に従ってください．
+このスクリプトをダウンロードするには以下のコマンドを使用します．
+
+    git clone https://github.com/takiwaki/ReportJSPS ReportJSPS
+    
 
 ## 1. 個別にDOIと発表を収集する
 
