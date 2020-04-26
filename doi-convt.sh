@@ -41,8 +41,13 @@ declare -i count=1
 for (( count=1; count <= $LINE ; count++)); do 
 # the 1st column corresponds doi in ${csvinput}.
         URL=`awk -F "${sep1}" '{print $1 }' doi_list_tmp | head -n ${count} | tail -1`
-	# if URL does not include http://dx.doi.org/
-# We must add some procedures here.
+
+# if URL includes http://doi.org/
+        URL=`echo ${URL} | sed -e "s@http://doi.org/@@g" `
+        URL=`echo ${URL} | sed -e "s@https://doi.org/@@g" `
+        URL=`echo ${URL} | sed -e "s@http://dx.doi.org/@@g" `
+        URL=`echo ${URL} | sed -e "s@https://dx.doi.org/@@g" `
+	URL=https://doi.org/${URL}
 	
     REFEREED=`awk -F "${sep1}" '{print $2 }' doi_list_tmp | head -n ${count} | tail -1`
      OPENACC=`awk -F "${sep1}" '{print $3 }' doi_list_tmp | head -n ${count} | tail -1`
